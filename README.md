@@ -8,6 +8,7 @@ This repository documents my hands-on journey from Linux fundamentals through mo
 
 ## 📚 Repository Structure
 
+```
 devops-learning/
 │
 ├── README.md
@@ -27,6 +28,8 @@ devops-learning/
 │ ├── challenge2.sh
 │ ├── challenge3.sh
 │ └── challenge4.sh
+
+```
 
 # 🐧 Linux
 

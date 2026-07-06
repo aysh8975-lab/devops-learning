@@ -41,14 +41,15 @@ Each level documents:
 
 # 📂 Folder Structure
 
+```
 linux/
-│
 └── bandit/
     ├── bandit-notes.md
     ├── file-system-notes.md
     ├── process-management.md
     ├── text-processing.md
     └── file-own.txt
+```
 ---
 
 # 🛠️ Skills Developed
