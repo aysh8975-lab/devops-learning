@@ -1,130 +1,183 @@
 # 🚀 DevOps Learning Journey
 
-A hands-on repository documenting my progress learning Linux, system administration fundamentals, and DevOps concepts.
+Welcome to my DevOps learning repository.
 
-This repository serves as both a study reference and a portfolio of practical work completed throughout my learning journey.
+This repository documents my hands-on journey from Linux fundamentals through modern DevOps tools and cloud technologies. It serves as both a personal knowledge base and a portfolio demonstrating practical skills gained through labs, scripting challenges, and real-world projects.
 
 ---
 
-## 📚 What This Repository Contains
+## 📚 Repository Structure
 
-### Linux Fundamentals
+devops-learning/
+│
+├── README.md
+│
+├── linux/
+│ ├── README.md
+│ └── bandit/
+│ ├── bandit-notes.md
+│ ├── file-system-notes.md
+│ ├── process-management.md
+│ ├── text-processing.md
+│ └── file-own.txt
+│
+├── bash-scripting/
+│ ├── README.md
+│ ├── challenge1.sh
+│ ├── challenge2.sh
+│ ├── challenge3.sh
+│ └── challenge4.sh
 
-Notes and exercises covering:
+# 🐧 Linux
 
-- File system navigation
+The Linux section contains my study notes, exercises and practical labs covering:
+
+- Linux filesystem navigation
+- File and directory management
 - File permissions and ownership
+- Users and groups
 - Process management
-- Text processing
 - Shell fundamentals
+- Text processing
+- Package management
+- Common Linux utilities
 
 ### OverTheWire Bandit
 
-A complete write-up of Bandit Levels 0–20, including:
+Included is a complete walkthrough of **Bandit Levels 0–23**, documenting:
 
-- Objectives for each level
+- Challenge objectives
 - Commands used
-- Failed attempts and troubleshooting
-- Working solutions
+- Troubleshooting and failed attempts
+- Final solutions
 - Command explanations
 - Key Linux concepts learned
 
 ---
 
-## 📂 Repository Structure
+# 🖥️ Bash Scripting
 
-```text
-devops-learning/
-│
-├── README.md
-│
-└── linux/
-    └── bandit/
-        ├── bandit-notes.md
-        ├── file-system-notes.md
-        ├── process-management.md
-        ├── text-processing.md
-        └── file-own.txt
-```
+The Bash Scripting section contains practical automation exercises focused on developing shell scripting skills.
+
+Completed challenges include:
+
+### Challenge 1 – Basic Arithmetic Calculator
+
+- User input
+- Arithmetic operations
+- Division by zero validation
+- Conditional statements
+
+### Challenge 2 – File Operations Script
+
+- Directory creation
+- File creation
+- Writing dynamic content
+- Command substitution
+- Output redirection
+
+### Challenge 3 – File Checker
+
+- File existence validation
+- Read, write and execute permission checks
+- User input
+- Functions
+- Error handling
+
+### Challenge 4 – Backup Script
+
+- Directory validation
+- Backup automation
+- Timestamped backup folders
+- Copying text files
+- Counting processed files
 
 ---
 
-## 🛠️ Skills Developed
+# 🛠️ Skills Developed
+
+Throughout this repository I've practised:
 
 ### Linux
 
-- Navigating the Linux filesystem
-- Working with hidden files
-- File permissions and ownership
-- Searching for files with `find`
-- Reading and analyzing files with `cat`, `less`, and `file`
+- Linux command line
+- Filesystem navigation
+- File permissions
+- Process management
+- Text processing
+- SSH
+- Basic networking tools
 
-### Text Processing
+### Bash
 
-- Searching text with `grep`
-- Working with structured data using `awk`
-- Editing streams with `sed`
-- Combining commands with pipes
-
-### Process Management
-
-- Viewing processes with `ps aux`
-- Monitoring systems with `top`
-- Running background jobs
-- Finding PIDs
-- Managing and terminating processes
-
-### Networking & Security
-
-- SSH authentication
-- SSH key usage
-- Netcat (`nc`)
-- SSL/TLS connections with OpenSSL
-- Basic port scanning with Nmap
+- Variables
+- Functions
+- Parameters
+- User input
+- Conditional statements
+- Loops
+- File operations
+- Command substitution
+- Error handling
+- Shell automation
 
 ---
 
-## ⭐ Most Useful Commands Learned
+# 🎯 Current Progress
 
-| Command | Purpose |
-|----------|----------|
-| `ls -la` | List files and directories |
-| `find` | Locate files based on conditions |
-| `grep` | Search text |
-| `less` | Read large files efficiently |
-| `awk` | Extract and process columns of data |
-| `chmod` | Change file permissions |
-| `ssh` | Remote access |
-| `ps aux` | View running processes |
+## ✅ Completed
 
----
+- Linux Fundamentals
+- Linux Command Line
+- Process Management
+- Text Processing
+- OverTheWire Bandit (Levels 0–23)
+- Bash Scripting Challenges
 
-## 🎯 Current Progress
+## 🔄 Currently Learning
 
-Completed:
+- Git & GitHub
 
-- ✅ Linux Fundamentals
-- ✅ Process Management
-- ✅ Text Processing
-- ✅ OverTheWire Bandit Levels 0–23
+## 📌 Next Topics
 
-Next Topics:
-
-- 🔄 Shell Scripting
-- 🔄 Git Workflows
-- 🔄 Docker
-- 🔄 CI/CD
-- 🔄 Kubernetes
+- Networking Fundamentals
+- Docker
 
 ---
 
-## 📖 Learning Philosophy
+# 📖 Learning Philosophy
 
-The goal of this repository is not just to complete exercises, but to understand how Linux works by documenting:
+The goal of this repository is not simply to complete tutorials, but to understand the technologies by documenting:
 
-- What the challenge required
-- What commands were attempted
+- The problem or challenge
+- Commands and approaches attempted
 - Why the final solution worked
-- What concepts were learned
+- Key concepts learned
+- Practical takeaways
 
-This approach helps reinforce understanding while building a practical reference for future projects.
+This approach reinforces understanding while creating a long-term reference for future DevOps projects.
+
+---
+
+# 🚀 Future Roadmap
+
+As I continue my DevOps journey, this repository will expand to include:
+
+- Git & GitHub
+- Networking Fundamentals
+- Docker
+- AWS
+- Terraform
+- Jenkins
+- Kubernetes
+- CI/CD Pipelines
+- Infrastructure as Code (IaC)
+- End-to-end DevOps Projects
+
+---
+
+## 👩‍💻 Author
+
+**Aisha**
+
+Aspiring DevOps Engineer | Building practical skills through hands-on projects and continuous learning.
