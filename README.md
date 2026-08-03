@@ -8,10 +8,14 @@ This repository documents my hands-on journey from Linux fundamentals through mo
 
 ## 📚 Repository Structure
 
-```
 devops-learning/
 │
 ├── README.md
+│
+├── images/
+│ ├── instance.png
+│ ├── DNS.png
+│ └── site.png
 │
 ├── linux/
 │ ├── README.md
@@ -28,10 +32,14 @@ devops-learning/
 │ ├── challenge2.sh
 │ ├── challenge3.sh
 │ └── challenge4.sh
+│
+├── networking/
+│ ├── README.md
 
-```
 
-# 🐧 Linux
+---
+
+## 🐧 Linux
 
 The Linux section contains my study notes, exercises and practical labs covering:
 
@@ -46,8 +54,7 @@ The Linux section contains my study notes, exercises and practical labs covering
 - Common Linux utilities
 
 ### OverTheWire Bandit
-
-Included is a complete walkthrough of **Bandit Levels 0–23**, documenting:
+Included is a complete walkthrough of Bandit Levels 0–23, documenting:
 
 - Challenge objectives
 - Commands used
@@ -58,37 +65,33 @@ Included is a complete walkthrough of **Bandit Levels 0–23**, documenting:
 
 ---
 
-# 🖥️ Bash Scripting
+## 🖥️ Bash Scripting
 
 The Bash Scripting section contains practical automation exercises focused on developing shell scripting skills.
 
 Completed challenges include:
 
-### Challenge 1 – Basic Arithmetic Calculator
-
+**Challenge 1 – Basic Arithmetic Calculator**
 - User input
 - Arithmetic operations
 - Division by zero validation
 - Conditional statements
 
-### Challenge 2 – File Operations Script
-
+**Challenge 2 – File Operations Script**
 - Directory creation
 - File creation
 - Writing dynamic content
 - Command substitution
 - Output redirection
 
-### Challenge 3 – File Checker
-
+**Challenge 3 – File Checker**
 - File existence validation
 - Read, write and execute permission checks
 - User input
 - Functions
 - Error handling
 
-### Challenge 4 – Backup Script
-
+**Challenge 4 – Backup Script**
 - Directory validation
 - Backup automation
 - Timestamped backup folders
@@ -97,12 +100,29 @@ Completed challenges include:
 
 ---
 
-# 🛠️ Skills Developed
+## 🌐 Networking
+
+The Networking section covers core networking fundamentals as well as a practical cloud deployment project, including:
+
+- Network components (switches, routers, firewalls)
+- IP addressing (IPv4, IPv6) and MAC addresses
+- Ports, protocols, TCP vs. UDP
+- OSI and TCP/IP models
+- DNS fundamentals, records, and resolution
+- Routing (static, dynamic, OSPF, BGP)
+- Subnetting and CIDR notation
+- NAT (Static, Dynamic, PAT)
+- Network troubleshooting tools and methodology
+
+**Practical Assignment:** Hosting an NGINX web server on an AWS EC2 instance and connecting a custom domain via Cloudflare DNS — covering EC2 setup, security groups, NGINX installation and configuration, and DNS A records.
+
+---
+
+## 🛠️ Skills Developed
 
 Throughout this repository I've practised:
 
-### Linux
-
+**Linux**
 - Linux command line
 - Filesystem navigation
 - File permissions
@@ -111,8 +131,7 @@ Throughout this repository I've practised:
 - SSH
 - Basic networking tools
 
-### Bash
-
+**Bash**
 - Variables
 - Functions
 - Parameters
@@ -124,31 +143,39 @@ Throughout this repository I've practised:
 - Error handling
 - Shell automation
 
+**Networking**
+- IP addressing and subnetting
+- DNS configuration and troubleshooting
+- Routing concepts
+- Cloud networking (AWS VPC, security groups)
+- Deploying and connecting a web server to a custom domain
+
 ---
 
-# 🎯 Current Progress
+## 🎯 Current Progress
 
-## ✅ Completed
-
+### ✅ Completed
 - Linux Fundamentals
 - Linux Command Line
 - Process Management
 - Text Processing
 - OverTheWire Bandit (Levels 0–23)
 - Bash Scripting Challenges
-
-## 🔄 Currently Learning
-
 - Git & GitHub
-
-## 📌 Next Topics
-
 - Networking Fundamentals
+- AWS EC2 + NGINX + Cloudflare DNS Project
+
+### 🔄 Currently Learning
 - Docker
+
+### 📌 Next Topics
+- AWS (deeper dive)
+- Terraform
+- CI/CD Pipelines
 
 ---
 
-# 📖 Learning Philosophy
+## 📖 Learning Philosophy
 
 The goal of this repository is not simply to complete tutorials, but to understand the technologies by documenting:
 
@@ -162,12 +189,10 @@ This approach reinforces understanding while creating a long-term reference for 
 
 ---
 
-# 🚀 Future Roadmap
+## 🚀 Future Roadmap
 
 As I continue my DevOps journey, this repository will expand to include:
 
-- Git & GitHub
-- Networking Fundamentals
 - Docker
 - AWS
 - Terraform
@@ -182,5 +207,4 @@ As I continue my DevOps journey, this repository will expand to include:
 ## 👩‍💻 Author
 
 **Aisha**
-
 Aspiring DevOps Engineer | Building practical skills through hands-on projects and continuous learning.
