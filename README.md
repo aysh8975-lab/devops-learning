@@ -4,7 +4,7 @@ Welcome to my DevOps learning repository.
 
 This repository documents my hands-on journey from Linux fundamentals through modern DevOps tools and cloud technologies. It serves as both a personal knowledge base and a portfolio demonstrating practical skills gained through labs, scripting challenges, and real-world projects.
 
----
+```
 
 ## 📚 Repository Structure
 
@@ -37,7 +37,7 @@ devops-learning/
 │ ├── README.md
 
 
----
+```
 
 ## 🐧 Linux
 
