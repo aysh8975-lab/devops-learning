@@ -244,33 +244,36 @@ Benefits of NAT
 	• Hides internal IP addresses from direct exposure
 	• Simplifies network design
 
-9. Networking Troubleshooting
+9.Networking Troubleshooting
+
 Useful tools include:
-ping <host>
+ping host
 Tests basic connectivity.
-traceroute <host>
+traceroute host
 Shows the path traffic takes through routers.
+
 On Windows, use:
-tracert <host>
-nslookup <domain>
+tracert host
+nslookup domain
 Queries DNS information.
-dig <domain>
+dig domain
 Provides detailed DNS query information.
 dig NS example.com
 Finds a domain's name servers.
 dig +short NS example.com
 Returns a shorter name-server result.
 Systematic troubleshooting approach
+
 When a website or service is not reachable:
-	1. Check that the server is running.
-	2. Check the application/service status.
-	3. Confirm the service is listening on the correct port.
-	4. Test locally using curl.
-	5. Check firewall or security-group rules.
-	6. Verify routing and internet connectivity.
-	7. Check DNS records and DNS resolution.
-	8. Test from another browser or device.
-	9. Check logs for errors.
+1.Check that the server is running.
+2.Check the application/service status.
+3.Confirm the service is listening on the correct port.
+4.Test locally using curl.
+5.Check firewall or security-group rules.
+6.Verify routing and internet connectivity.
+7.Check DNS records and DNS resolution.
+8.Test from another browser or device.
+9.Check logs for errors.
 A browser-specific issue can sometimes make a working service appear unavailable, so testing with another browser is a useful troubleshooting step.
 
 Practical Assignment: Host an NGINX Web Server on AWS EC2 and Connect a Domain
@@ -294,25 +297,30 @@ Step 1: Buy or register a domain
 Purchase or register a domain using a provider such as Cloudflare or AWS Route 53.
 Example:
 aishamoad.co.uk
+
 Step 2: Launch an EC2 instance
 In the AWS Console:
-	1. Open EC2.
-	2. Select Instances.
-	3. Click Launch instances.
-	4. Give the instance a name, for example:
+1.Open EC2.
+2.Select Instances.
+3.Click Launch instances.
+4.Give the instance a name, for example:
+
 Myweb
-	5. Select an operating system:
+5.Select an operating system:
+
 Amazon Linux 2023
+
 Ubuntu can also be used.
-	6. Select an appropriate instance type, such as:
+6.Select an appropriate instance type, such as:
 t3.micro
-	7. Create or select an SSH key pair.
-	8. Download and securely store the .pem key file.
-	9. Configure a security group with:
-	Rule	Protocol	Port	Source
-	SSH	TCP	22	My IP
-	HTTP	TCP	80	Anywhere (0.0.0.0/0)
-	10. Launch the instance.
+7.Create or select an SSH key pair.
+8.Download and securely store the .pem key file.
+9.Configure a security group with:
+Rule	Protocol	Port	Source
+SSH	TCP	22	My IP
+HTTP	TCP	80	Anywhere (0.0.0.0/0)
+10.Launch the instance.
+
 Step 3: Connect to the EC2 instance
 From WSL, move or copy the key into a secure location and set the correct permissions:
 chmod 400 ~/Downloads/your-key.pem
@@ -322,7 +330,9 @@ For Amazon Linux, the default username is usually:
 ec2-user
 For Ubuntu, it is usually:
 Ubuntu
-![EC2 Instance](images/instance.png)
+
+![EC2 Instance](../images/instance.png)
+
 Step 4: Install NGINX
 For Amazon Linux 2023:
 sudo dnf install -y nginx
@@ -335,6 +345,7 @@ sudo systemctl status nginx
 Expected status:
 Active: active (running)
 Press q to exit the status screen.
+
 Step 5: Test NGINX locally
 Run:
 curl http://localhost
@@ -345,35 +356,43 @@ sudo ss -tulpn | grep :80
 Expected output should include:
 0.0.0.0:80
 This means NGINX is listening on port 80 across all IPv4 interfaces.
+
 Step 6: Test using the EC2 public IPv4 address
 In the AWS EC2 console:
-	1. Select the instance.
-	2. Copy the Public IPv4 address.
-	3. Open a browser.
-	4. Visit:
+Select the instance.
+Copy the Public IPv4 address.
+Open a browser.
+Visit:
+
 http://YOUR-EC2-PUBLIC-IP
+
 Do not use the private IP address.
 Example:
 http://xx.xxx.xx.xxx
 The NGINX landing page should load.
 If the page does not load:
-	• Confirm the instance is running.
-	• Confirm the security group allows TCP port 80 from 0.0.0.0/0.
-	• Confirm NGINX is active.
-	• Confirm NGINX is listening on port 80.
-	• Test another browser if the configuration appears correct.
+Confirm the instance is running.
+Confirm the security group allows TCP port 80 from 0.0.0.0/0.
+Confirm NGINX is active.
+Confirm NGINX is listening on port 80.
+
+Test another browser if the configuration appears correct.
+
 Step 7: Create the Cloudflare DNS record
+
 In Cloudflare:
-	1. Open the domain.
-	2. Go to DNS → Records.
-	3. Click Add record.
-	4. Configure:
-	Setting	Value
-	Type	A
-	Name	nginx
-	IPv4 address	EC2 Public IPv4 address
-	Proxy status	DNS only
-	TTL	Auto
+1.Open the domain.
+2.Go to DNS → Records.
+3.Click Add record.
+4.Configure:
+
+Setting	Value
+Type	A
+Name	nginx
+IPv4 address	EC2 Public IPv4 address
+Proxy status	DNS only
+TTL	Auto
+
 Example:
 Type: A
 Name: nginx
@@ -382,21 +401,24 @@ Proxy status: DNS only
 TTL: Auto
 Cloudflare automatically combines the record name with the domain:
 nginx.aishamoad.co.uk
-![DNS Setup](images/DNS.png)
+
+![DNS Setup](../images/DNS.png)
 
 Step 8: Test the domain
 Wait for the DNS record to propagate, then open:
 http://nginx.aishamoad.co.uk
 The NGINX default page should appear.
-![Live Site](images/site.png)
+
+![Live Site](../images/site.png)
+
 Important Notes
-	• Use the EC2 Public IPv4 address in the Cloudflare A record, not the private IP.
-	• A private address such as 172.31.x.x is used inside AWS and is not directly reachable from the public internet.
-	• An auto-assigned EC2 public IPv4 address may change after the instance is stopped and started.
-	• If the public IP changes, update the Cloudflare A record.
-	• An Elastic IP can provide a persistent public IPv4 address if needed.
-	• Stop the EC2 instance when it is not needed to avoid unnecessary charges.
-	• Do not terminate the instance unless you are finished and no longer need its configuration.
+Use the EC2 Public IPv4 address in the Cloudflare A record, not the private IP.
+A private address such as 172.31.x.x is used inside AWS and is not directly reachable from the public internet.
+An auto-assigned EC2 public IPv4 address may change after the instance is stopped and started.
+If the public IP changes, update the Cloudflare A record.
+An Elastic IP can provide a persistent public IPv4 address if needed.
+Stop the EC2 instance when it is not needed to avoid unnecessary charges.
+Do not terminate the instance unless you are finished and no longer need its configuration.
 
 Key Takeaway
 This assignment demonstrated how networking concepts work together in a real cloud environment:
