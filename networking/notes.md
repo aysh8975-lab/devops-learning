@@ -1,4 +1,6 @@
-# Networking Fundamentals Module Overview                                                                                                                                                                                                                                                                                                                                               This module covered the core networking concepts that support communication across local networks, cloud infrastructure, and the internet. Topics included network components, IP addressing, ports and protocols, DNS, routing, subnetting, NAT, troubleshooting, and a practical AWS EC2 + NGINX + Cloudflare assignment.
+# Networking Fundamentals Module Overview
+
+This module covered the core networking concepts that support communication across local networks, cloud infrastructure, and the internet. Topics included network components, IP addressing, ports and protocols, DNS, routing, subnetting, NAT, troubleshooting.
 
 ---
 
