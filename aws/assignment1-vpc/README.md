@@ -4,6 +4,8 @@
 
 The objective of this assignment was to design and build a custom AWS networking environment from scratch. The environment included a VPC, public and private subnets, an Internet Gateway, a NAT Gateway, route tables, EC2 instances and security groups.
 
+<img width="752" height="1071" alt="Network plan" src="https://github.com/user-attachments/assets/0bbba714-896b-418a-a513-4ccb1a182e27" />
+
 The design was intended to demonstrate network segmentation: the public EC2 instance could be reached from my laptop, while the private EC2 instance had no public IP and could only be accessed through the public bastion host.
 
 This assignment was not only about creating AWS resources. It was also about understanding why each resource is needed and how the resources work together. The final design needed to demonstrate that:
